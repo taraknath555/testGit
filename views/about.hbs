@@ -1,0 +1,10 @@
+{{> header}}
+    <h3>this is {{pageName}} page!</h3>
+    <p>welcome to {{pageName}} page! {{user}}</p>
+    <ul>
+      {{# each task}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    <a href="/">Home page</a>
+{{> footer}}
