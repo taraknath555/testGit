@@ -48,6 +48,14 @@ app.get("/about", (req,res)=> {
     "go to college"],
   })
 })
+
+app.get("/project", (req,res) => {
+  res.render("project",{
+    pageName:"project"
+  })
+})
+
+
 app.listen(port,() => {
   console.log(`server is started in port ${port}`)
 });
