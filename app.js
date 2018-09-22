@@ -3,6 +3,8 @@ var hbs=require("hbs")
 var app=express();
 var fs=require("fs")
 
+const port=process.env.PORT || 3000;
+
 //Configuration
 app.set("view engine","hbs")
 hbs.registerHelper("year",() => {
@@ -46,6 +48,6 @@ app.get("/about", (req,res)=> {
     "go to college"],
   })
 })
-app.listen(3000,() => {
-  console.log("server is started in port 3000")
+app.listen(port,() => {
+  console.log(`server is started in port ${port}`)
 });
